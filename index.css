@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section {
+  padding: 5em;
+  height: calc(100vh - 10em);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section:nth-child(2) {
+  background: #fff;
+}
+
+section:nth-child(2) h1 {
+  color: #010606;
+  font-weight: bold;
+}
+
+section:nth-child(2) p {
+  color: #010606;
+}
+
+section:nth-child(3) {
+  background: #FFCC33;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%);
+      grid-template-areas: 'col1 col2';
+}
+
+section:nth-child(3) .imgWrapp {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: col1;
+}
+
+section:nth-child(3) .imgWrapp img {
+  width: 400px;
+}
+
+section:nth-child(3) .sectionTwoWrapp {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: col2;
+}
+
+section:nth-child(4) {
+  background: #fff;
+  font-weight: bold;
+}
+
+section p {
+  max-width: 550px;
+}
+
+section h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+section button {
+  padding: 10px 25px;
+  margin-top: 15px;
+  border: 1px solid #010606;
+  color: #010606;
+  background: none;
+  border-radius: 5px;
+}
+
+section button:hover {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background: #010606;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+  section:nth-child(3) img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=index.css.map */

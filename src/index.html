@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumps.js</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <section class="section-one">
+        <div class="sectionOneWrapp">
+            <h1>Section 1</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nam explicabo doloremque doloribus reiciendis consequuntur blanditiis inventore itaque, tempora iusto quasi, neque labore laudantium. Architecto nesciunt veniam molestiae nisi laboriosam.</p>
+            <button id="one">click me!</button>
+        </div>
+    </section>
+    <section class="section-two">
+        <div class="imgWrapp">
+            <img src="./img/svg-1.svg" alt="">
+        </div>
+        <div class="sectionTwoWrapp">
+            <h1>Section 2</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste tenetur deserunt suscipit consequatur itaque delectus commodi totam numquam perferendis facere illum, magni libero reiciendis, id aliquid est ipsam sunt sit!</p>
+            <button id='two'>Click me!</button>
+        </div>
+    </section>
+    <section class="section-three">
+        <div class="sectionThreeWrapp">
+            <h1>Section 3</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, quisquam totam quos similique, unde atque tempore reiciendis consequatur assumenda veritatis ullam saepe illum perspiciatis nemo magni ratione quia quidem vel.
+            </p>
+            <button id="three">click me</button>
+        </div>
+    </section>
+    <script type="module" >
+
+        import jump from "../node_modules/jump.js/dist/jump.module.js";
+
+        let btnOne = document.getElementById('one');
+        let btnTwo = document.getElementById('two');
+        let btnThree = document.getElementById('three');
+
+        btnOne.addEventListener('click', ()=>{
+            jump('.section-three');
+        });
+
+        btnTwo.addEventListener('click', ()=>{
+            jump('.section-one');
+        });
+
+        btnThree.addEventListener('click', ()=>{
+            jump('.section-two',{
+                durantion : 100
+            });
+        });
+
+
+
+    </script>
+</body>
+</html>
